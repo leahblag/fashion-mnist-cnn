@@ -39,7 +39,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
 # Training loop
-epochs = 3
+epochs = 3  # Set to 3 epochs as per Part 2 instructions
 for epoch in range(epochs):
     model.train()  # Set model to training mode
     running_loss = 0.0
@@ -53,7 +53,7 @@ for epoch in range(epochs):
     
     print(f'Epoch [{epoch+1}/{epochs}], Loss: {running_loss/len(train_loader):.4f}')
 
-# Save the model
+# Save the trained model
 torch.save(model.state_dict(), 'fashion_mnist_cnn_model.pt')
 print("Model saved to 'fashion_mnist_cnn_model.pt'")
 
